@@ -44,9 +44,9 @@ var dics = {
   '日報処理': 'Công việc thường ngày',
   '報告・相談': 'Báo cáo & trợ giúp',
   /*'共通強化': 'Tăng cường chung',
-  '共通維持': 'Bảo trì thường',
-  '共通': 'Thường ngày',
-  '企画・基盤': 'Quy hoạch và nền tảng',
+  '共通維持': 'Bảo trì thường',*/
+  '共通': 'Chung',
+  /*'企画・基盤': 'Quy hoạch và nền tảng',
   '共通': 'Thường',
   '就業強化': 'Tăng cường việc làm',
   '就業維持': 'Duy trì việc làm',
@@ -66,7 +66,7 @@ var dics = {
   'HRM維持': 'Duy trì HRM',
   'HRM': 'HRM',*/
   '詳細設計': 'Thiết kế chi tiết',
-  'AP開発': 'Chương trình',
+  'AP開発': 'Lập trình',
   'ｺｰﾃﾞｨﾝｸﾞ': 'đang viết',
   '製造者ﾃｽﾄ': 'tự test'
 };
@@ -84,13 +84,13 @@ setInterval(function () {
       });
 
     for (var i in dics) {
-      var key = i.replace('(', '\(').replace(')', '\)');
       if ($item.html()) {
         let html = $item.html()
           .replace(new RegExp('&nbsp;', 'g'), '')
-          .replace(new RegExp(key, "g"), `<span>${dics[i]}</span>`)
+          .replace(new RegExp(i, "g"), `<span>${dics[i]}</span>`)
           .replace(new RegExp('<br', 'g'), '<div class="break"></div')
-          .replace(new RegExp(`value="<span>${dics[i]}</span>"`, 'g'), `value="${dics[i]}"`);
+          .replace(new RegExp(`value="<span>${dics[i]}</span>"`, 'g'), `value="${dics[i]}"`)
+          .replace(new RegExp('<div class="break"></div><div class="break"></div>', 'g'), '<div class="break"></div>');
 
         $item.html(html);
       }
