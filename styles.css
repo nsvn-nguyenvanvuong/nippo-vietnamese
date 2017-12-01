@@ -99,6 +99,7 @@ input[type=password],
 select {
   height: 27px;
   line-height: 27px;
+  margin-right: 3px;
 }
 
 form[action="NippoHontai.asp"] td:last-child {
