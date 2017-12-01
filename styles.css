@@ -119,3 +119,10 @@ form[action="NippoHontai.asp"] input[type=text] {
 form[action="NippoHontai.asp"] textarea {
     padding: 5px;
 }
+
+form[action="NippoHontai.asp"] {
+    background-image: url(https://raw.githubusercontent.com/nsvn-nguyenvanvuong/nippo-vietnamese/master/shot_code.png);
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 0;
+}
